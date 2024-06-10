@@ -1,27 +1,48 @@
-// Refactoring old Code 
-//function oldCode(object, key){
-//     const code = [{index: "1", mass: "0.00", spring1:".050", spring2: ".050"},
-//                 {index: "2", mass: "0.49", spring1:"0.066", spring2: "0.066"},
-//                 {index: "3", mass: "0.98", spring1:"0.087", spring2: "0.080"},
-//                 {index: "4", mass: "1.47", spring1:"0.116", spring2: "0.108"},
-//                 {index: "5", mass: "1.96", spring1:"0.142", spring2: "0.138"},
-//                 {index: "6", mass: "2.45", spring1:"0.166", spring2: "0.158"},
-//                 {index: "7", mass: "2.94", spring1:"0.193", spring2: "0.174"},
-//                 {index: "8", mass: "3.43", spring1:"0.204", spring2: "0.192"},
-//                 {index: "9", mass: "3.92", spring1:"0.226", spring2: "0.205"},
-//                 {index: "10", mass: "4.41", spring1:"0.238", spring2: "0.232"},
-// ]
+// Part 1
+//Refactoring the old code.
+const code = "Index,Mass (kg),Spring 1 (m),Spring 2 (m)\n1,0.00,0.050,0.050\n2,0.49,0.066,0.066\n3,0.98,0.087,0.080\n4,1.47,0.116,0.108\n5,1.96,0.142,0.138\n6,2.45,0.166,0.158\n7,2.94,0.193,0.174\n8,3.43,0.204,0.192\n9,3.92,0.226,0.205\n10,4.41,0.238,0.232"
+new_code = code.split('\n')
+console.log(new_code)
 
-// let codeCopy = code.concat(index)
-// console.log(code)
 
-let string1 = ["1", "0.00", ".050", ".050"];
-let spring2 = ["2", "0.49", "0.066", "0.066"]
-let spring3 =["3", "0.98", "0.087", "0.080"]
-let spring4 =["4", "1.47", "0.116", "0.108"]
-let spring5 =["5", "1.96", "0.142", "0.138"]
-let spring6 =["6", "2.45", "0.166", "0.158"]
-let spring7 =["7", "2.94", "0.193", "0.174"]
-let spring8 =["8", "3.43", "0.204", "0.192"]
-let spring9 =["9", "3.92", "0.226", "0.205"]
-let spring10 =["10", "4.41", "0.238", "0.232"]
+
+//Part 2: Expanding Functionality
+// Assigned the csv code a variable
+const csv = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26"
+
+// Created a function with a parameter name str
+function formatIntoArray(str){
+    // Seperate the code at every \n.
+    const arr = str.split('\n')
+    //Create an empty array.
+    let new_arr = []
+    // Loop over the code.
+    for(let i = 0 ; i <= arr.length-1 ; i++){
+        // Seperate at every comma.
+        const subArr = arr[i].split(",")
+       // Combine the two arrays together.
+        new_arr.push(subArr)
+    }
+    //Return the combined variable.
+    return new_arr
+}
+
+finishedArr = (formatIntoArray(csv))
+console.log(finishedArr)
+
+// Part 3: Transforming Data
+const data = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26"
+function transformingData(str1){
+    const arr1 = str.split ('\n')
+    let new_arr1 = []
+    let myObj = {}
+    for (let i = 0; i <= new_arr1.length-1; i++){
+        const subArr1 = 
+    }
+
+}
+const myObj = {};
+for (i=0; i < subArr.length; i++){
+    myObj[i] = subArr[i]
+}
+console.log(myObj)
